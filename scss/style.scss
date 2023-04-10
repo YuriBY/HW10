@@ -1,0 +1,193 @@
+@mixin position($position, $top: null, $right: null, 
+                $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+
+
+section {
+    display: flex;
+    justify-content: center;
+    @media (max-width: 1150px) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+.rectangle {
+    width: 555px;
+    height: 296px;
+    box-sizing: border-box;
+    background: linear-gradient(257.26deg, #008BF0 -13.2%, #D943C9 130.95%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-right: 30px;
+    position: relative;
+    @media (max-width: 1150px) {
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 20px;
+        }
+    div {
+        margin-left: 35px;
+        color: white;
+        text-transform: uppercase;
+        &:nth-child(1) {
+            margin-top: 75px;
+            color: #F4F9FC;
+            font-family: Hind Siliguri, 'sans-serif';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 27px;
+            opacity: 0.6;
+            }
+        &:nth-child(2) {
+            width: 285px;
+            height: 81px;
+            font-family: Hind Siliguri, 'sans-serif';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 31px;
+            line-height: 40px;
+            color: #F4F9FC;
+            text-transform: none;
+            @media (max-width: 1150px) {
+                width: auto;
+                }
+            }
+        }          
+            
+    img {
+        @include position(absolute, 30px, -10px);
+        // position: absolute;
+        // right: -10px;
+        // top: 30px;
+        width: 275px;
+        height: 231px;
+        @media (max-width: 1150px) {
+            @include position(absolute, 30px, 5px);
+        }
+        @media (max-width: 850px) {
+                display: none;
+           
+            }
+            }                 
+        }
+
+.title {
+    margin-left: 850px;
+    font-family: Hind Siliguri, 'sans-serif';
+    font-style: normal;
+    @media (max-width: 1150px) {
+        display: none;
+       
+        }
+    .title_2 {
+        width: 180px;
+        height: 23px;
+        margin-top: 125px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 23px;
+        letter-spacing: 0.145em;
+        text-transform: uppercase;
+        color: #C72535;
+        opacity: 0.6;
+    }
+    .big_title {
+        width: 378px;
+        height: 71px;
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 71px;
+        color: #030D15;
+    
+    }
+
+}
+
+main {
+    width: vw;
+    height: 632px;
+    background: #F4F9FC;
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 1150px) {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+       }
+    
+    .image {
+        width: 609px;
+        height: 813px;
+        margin-left: 100px;       
+        border-radius: 10% 10% 20% 10%; 
+        background: url('../img/Layer\ 0\ 1.png'), url('../img/Vector\ \(5\).png');
+        background-repeat: no-repeat, no-repeat;
+        background-position: 45px 10px, 19px 236px;
+        transform: translateY(-165px);  
+        @media (max-width: 1150px) {
+            width: 100%;
+            transform: translateY(0); 
+                     
+           }
+        @media (max-width: 850px) {
+            margin-left: 5px;
+            width: 100%;
+            transform: translateY(0);
+            background-position: -5px 5px, 5px 219px;
+            
+                     
+           }        
+    }
+    .main__text {
+        width: 557px;
+        height: 450px;
+        margin-left: 144px;
+        font-family: Hind Siliguri, 'sans-serif';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 27px;
+        color: #030D15;
+        margin-bottom: 20px;
+        @media (max-width: 1150px) {
+            margin-top: 30px;
+            
+           }
+        @media (max-width: 850px) {
+        margin-left: 5px;
+        }            
+       
+        & :nth-child(1) {
+            margin-top: 84px;
+            width: 457px;
+            height: 158px;
+            font-family: Hind Siliguri, 'sans-serif';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #030D15;
+            opacity: 0.6;
+            } 
+        & :not(:nth-child(1))::before {
+            content: '';
+            display: inline-block;
+            background-image: url('../img/2023-03-29_21-20-36.png');
+            background-size: contain;
+            height: 30px;
+            width: 30px;
+             }
+        }
+}
+
+
+
+
+
